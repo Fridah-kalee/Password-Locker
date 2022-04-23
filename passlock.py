@@ -16,3 +16,16 @@ class User:
         method that saves user objects into user_list.
         '''
         User.user_list.append(self)
+
+    @classmethod
+    def display_user(cls):
+        '''
+        '''
+        return cls.user_list
+
+    @classmethod 
+    def delete_user(self):
+        '''
+        a method that deletes a saved user account
+        '''
+        User.user_list.remove(self)  
