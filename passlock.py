@@ -37,4 +37,16 @@ class Credentials():
     def __init__(self,account,userName,password):
         self.account = account
         self.userName = userName
-        self.password = password          
+        self.password = password
+
+    def save_credentials(self):
+        '''
+        method that stores new credential object to credential list
+        '''
+        Credentials.credentials_list.append(self)
+
+    def delete_credentials(self):
+        '''
+        a method that deletes credential account from the credential list.
+        '''
+        Credentials.credentials_list.remove(self)                  
