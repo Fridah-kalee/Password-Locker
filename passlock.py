@@ -19,8 +19,6 @@ class User:
 
     @classmethod
     def display_user(cls):
-        '''
-        '''
         return cls.user_list
 
     @classmethod 
@@ -28,4 +26,15 @@ class User:
         '''
         a method that deletes a saved user account
         '''
-        User.user_list.remove(self)  
+        User.user_list.remove(self)
+
+class Credentials():
+    '''
+    create credentials class that creates new objects of credentials
+    '''
+    credentials_list = [] 
+
+    def __init__(self,account,userName,password):
+        self.account = account
+        self.userName = userName
+        self.password = password          
