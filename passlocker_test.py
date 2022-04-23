@@ -58,7 +58,18 @@ class TestUser(unittest.TestCase):
         test_user.save_user()
 
         self.new_user.delete_user()
-        self.assertEqual(len(User.user_list),1)           
+        self.assertEqual(len(User.user_list),1)
+
+    def test_find_user_by_name(self):
+        '''
+        a test method to find a user by username
+        '''
+        self.new_user.save_user()
+        test_user = User('Test','sw5TF2!')
+        test_user.save_user()
+
+        test_user=User.find_by_user_name('Test')
+        self.assertEqual(test_user.username,test_user.username)              
 
 class TestCredentials(unittest.TestCase):
     '''
@@ -92,12 +103,35 @@ class TestCredentials(unittest.TestCase):
 
     def test_save_multiple_accounts(self):
         '''
-        a method to check if we can save multiple credentials account to the credentials list.
+        a test method to check if we can save multiple credentials account to the credentials list.
         '''
         self.new_credential.save_credentials()
         test_credential = Credentials('Twitter','CuteBabra','Kl4z@h4')
         test_credential.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)
+
+    def test_delete_credentials(self):
+        '''
+        test method to test if we can remove an account credentials from credentials list
+        ''' 
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Twitter','CuteBabra','Kl4z@h4')
+        test_credential.save_credentials()
+
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
+
+    def test_find_credential(self):
+        '''
+        test to check if we can find user credential based on the credentials
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Twitter','CuteBabra','Kl4z@h4')
+        test_credential.save_credentials()
+
+        the_credential = Credentials.find_credential('Twitter')
+        self.assertEqual(the_credential.account,test_credential.account)
+
 
 
 
