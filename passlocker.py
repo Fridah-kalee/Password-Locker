@@ -17,16 +17,16 @@ class User:
         '''
         User.user_list.append(self)
 
-    @classmethod
-    def display_user(cls):
-        return cls.user_list
-
-    @classmethod 
     def delete_user(self):
         '''
         a method that deletes a saved user account
         '''
-        User.user_list.remove(self)
+        User.user_list.remove(self)    
+
+    @classmethod
+    def display_users(cls):
+        return cls.user_list
+
 
 class Credentials():
     '''

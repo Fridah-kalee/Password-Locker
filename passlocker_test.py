@@ -28,6 +28,38 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
 
+    def tearDown(self):
+        '''
+        a method that cleans up after each test case has run
+        '''
+        User.user_list =[]    
+
+    def test_save_multiple_user(self):
+        '''
+        a method to check if we can save multiple user objects to our user_list
+        '''
+        self.new_user.save_user()
+        test_user=User('Test','sw5TF2!')
+        test_user.save_user()
+        self.assertEqual(len(User.user_list),2)
+
+    def test_display_all_users(self):
+        '''
+        a method that displays all users stored in user list
+        '''
+        self.assertEqual(User.display_users(),User.user_list)
+
+    def test_delete_user(self):
+        '''
+        a method to test if we can remove a user from our user list
+        '''
+        self.new_user.save_user()
+        test_user=User('Test','sw5TF2!')
+        test_user.save_user()
+
+        self.new_user.delete_user()
+        self.assertEqual(len(User.user_list),1)           
+
 class TestCredentials(unittest.TestCase):
     '''
     Test class that defines test cases for credentials class.
@@ -56,6 +88,7 @@ class TestCredentials(unittest.TestCase):
         '''
         tearDown method that does clean up after each test case has run.
         '''
+        Credentials.credentials_list =[]
 
     def test_save_multiple_accounts(self):
         '''
@@ -64,7 +97,7 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_credentials()
         test_credential = Credentials('Twitter','CuteBabra','Kl4z@h4')
         test_credential.save_credentials()
-        self.assertEqual(len(Credentials.credentials_list),3)
+        self.assertEqual(len(Credentials.credentials_list),2)
 
 
 
