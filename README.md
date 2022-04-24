@@ -18,11 +18,11 @@ This project is a python application that manages login and signup credentials o
 
 ## User REquirements
 The user would like to;
-* Create a password locker account with my details, a login username and password.
-* Store my already existing account credentials in the application for various accounts.
-* Create new account credentials in the application generates a password for me to use when I sign up.
+* Create a password locker account with details, a login username and password.
+* Store already existing account credentials in the application for various accounts.
+* Create new account credentials in the application and have the application generate a random password for me to use when I sign up.
 * Have the option of putting in a password that I want to use for the new credential account instead of the generated one.
-* View my various account credentials and their passwords in the application.
+* View various account credentials and their passwords in the application.
 * Delete a credentials account that I no longer need in the application.
 ## Installation/Setup instructions
 The application requires the following installations to run;
@@ -47,8 +47,8 @@ The application requires the following installations to run;
 ## Contact Information
 * Incase of any questions or contributions ,you can reach me at [fridakalee@gmail.com]
 ## License
-*MIT License:
-Copyright(c)2022 Fridah kalee
+* MIT License:
+* Copyright(c)2022 Fridah kalee
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
