@@ -36,12 +36,39 @@ The application requires the following installations to run;
 To run the application, open the cloned file in terminal and run the following commands:
    * $ chmod +x run.py
    * $ ./run.py
-   
+
 To run test for the application 
    * $ python3.9 passlocker_test.py 
-## BDD
+## Behaviour Driven Development
+On the terminal run the command ./run.py
 
+Creating account
+Input: Enter 'ca' 
+Output: Input username and password and it returns your account has been created.
 
+Login in to an already existing account
+Input: Enter 'ea'
+Ouput: Enter your your password and username you signed up with.
+
+Creating a new credential in the application.
+Input: Enter 'cc'
+Output: Enter Account,username,password choose tp to enter or gp for the application to generate a  password for you.
+
+Find a stored credential based on the account.
+Input: Enter 'fc'
+Output: Enter the account you want to search and it returns account details.
+
+Displaying the accounts. 
+Input: Enter 'dc' 
+Output: Returns list of accounts that are available in the application.
+
+Delete an existing credential that u dont want anymore.
+Input: Enter 'd'
+Output: Enter the account name of the credentials you want to delete and it returns true/false according to existance of the account.
+
+Exit Application
+Input: Enter 'ex'
+Output: The application exists                           
 ## Technologies Used
 * python3.9
 ## Known Bugs
@@ -51,7 +78,7 @@ To run test for the application
 ## License
 * MIT License:
 
-Copyright(c)2022 Fridah kalee
+* Copyright(c)2022 Fridah kalee
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
