@@ -129,20 +129,18 @@ def main():
             elif short_code == 'dc':
                 if display_account_details():
                     print("Here's your list of accounts:")
-                    print('*'* 30)
-                    print('*'* 30)
+                    
                     for account in display_account_details():
                         print(f" Account:{account.account} \n User Name:{username}\n Password:{password}")
-                        print('_'* 30)
-                        print('*' * 30)
+                        
                     else:
-                        print("You don't have any credentials saved yet...")
+                        print("Credentials successfully saved.")
                 
             elif short_code == "fc":
                     print("Enter the Account Name you want to search for")
                     search_account = input().lower()
-                    if find_credential(account):
-                        search_credential = find_credential(account)
+                    if find_credential(search_account):
+                        search_credential = find_credential(search_account)
                         print(f"Account Name : {search_credential.account}")
                         print('-' * 50)
                     else:
@@ -151,7 +149,7 @@ def main():
             elif short_code=="d":
                     print("Enter the account name of the Credentials you want to delete")
                     search_account = input().lower()
-                    if credential_(search_account):
+                    if find_credential(search_account):
                         search_credential = find_credential(search_account)
                         print("_"*50)
                         search_credential.delete_credentials()
@@ -164,12 +162,14 @@ def main():
             elif short_code =='gp':
                 password = generate_Password()
                 print(f"{password} Has been generated successfully")
-
-            elif short_code == 'ex':
-                print("Thanks for using passwords store manager.Bye")
+            elif short_code =="ex":
+                    print("Bye..")
+                    break
             else:
-                print("Wrong entry...please check your entry again to continue")
-                        
+                print("Thanks for using passwords keep safe manager")
+        else:
+            print("Please enter a valid input to continue")
+
 
 if __name__ == '__main__':
 
