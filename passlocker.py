@@ -25,22 +25,33 @@ class User:
         '''
         User.user_list.remove(self)
 
-    @classmethod
-    def find_by_user_name(cls,username):
-        '''
-        method that takes a name and returns a user that matches that username
-        Args:
-        name:user to search for
-        Returns:
-        username of the person that matches the name
-        '''
-        for user in cls.user_list:
-            if user.username==username:
-                return user        
+    # @classmethod
+    # def find_by_user_name(cls,username):
+    #     '''
+    #     method that takes a name and returns a user that matches that username
+    #     Args:
+    #     name:user to search for
+    #     Returns:
+    #     username of the person that matches the name
+    #     '''
+    #     for user in cls.user_list:
+    #         if user.username==username:
+    #             return user        
 
     @classmethod
     def display_users(cls):
         return cls.user_list
+
+    @classmethod
+    def verify_user(cls,username,password):
+        '''
+        a method to verify if the user is in our user_list or not
+        '''
+        user=''
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                user ==user.username
+        return user    
 
 
 class Credentials():
@@ -48,18 +59,6 @@ class Credentials():
     create credentials class that creates new objects of credentials
     '''
     credentials_list = []
-
-# @classmethod
-# def verify_user(cls,username,password):
-#     '''
-#     a method to verify if the user is in our user_list or not
-#     '''
-#     user=''
-#     for user in User.user_list:
-#         if(user.username == username and user.password == password):
-#             user ==user.username
-#         return user
-
 
     def __init__(self,account,userName,password):
         self.account = account

@@ -60,16 +60,16 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list),1)
 
-    def test_find_user_by_name(self):
-        '''
-        a test method to find a user by username
-        '''
-        self.new_user.save_user()
-        test_user = User('Test','sw5TF2!')
-        test_user.save_user()
+    # def test_find_user_by_name(self):
+    #     '''
+    #     a test method to find a user by username
+    #     '''
+    #     self.new_user.save_user()
+    #     test_user = User('Test','sw5TF2!')
+    #     test_user.save_user()
 
-        test_user=User.find_by_user_name('Test')
-        self.assertEqual(test_user.username,test_user.username)              
+    #     test_user=User.find_by_user_name('Test')
+    #     self.assertEqual(test_user.username,test_user.username)              
 
 class TestCredentials(unittest.TestCase):
     '''
