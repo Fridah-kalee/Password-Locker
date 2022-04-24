@@ -40,35 +40,35 @@ To run the application, open the cloned file in terminal and run the following c
 To run test for the application 
    * $ python3.9 passlocker_test.py 
 ## Behaviour Driven Development
-On the terminal run the command ./run.py
+* On the terminal run the command ./run.py
 
-Creating account
-Input: Enter 'ca' 
-Output: Input username and password and it returns your account has been created.
+* Creating account
+Input: enter 'ca' 
+Output: input username and password and it returns your account has been created.
 
-Login in to an already existing account
-Input: Enter 'ea'
-Ouput: Enter your your password and username you signed up with.
+* Login in to an already existing account
+Input: enter 'ea'
+Ouput: enter your your password and username you signed up with.
 
-Creating a new credential in the application.
-Input: Enter 'cc'
-Output: Enter Account,username,password choose tp to enter or gp for the application to generate a  password for you.
+* Creating a new credential in the application.
+Input: enter 'cc'
+Output: enter Account,username,password choose tp to enter or gp for the application to generate a  password for you.
 
-Find a stored credential based on the account.
-Input: Enter 'fc'
-Output: Enter the account you want to search and it returns account details.
+* Find a stored credential based on the account.
+Input: enter 'fc'
+Output: enter the account you want to search and it returns account details.
 
-Displaying the accounts. 
-Input: Enter 'dc' 
-Output: Returns list of accounts that are available in the application.
+* Displaying the accounts. 
+Input: enter 'dc' 
+Output: returns list of accounts that are available in the application.
 
-Delete an existing credential that u dont want anymore.
-Input: Enter 'd'
-Output: Enter the account name of the credentials you want to delete and it returns true/false according to existance of the account.
+* Delete an existing credential that u dont want anymore.
+Input: enter 'd'
+Output: enter the account name of the credentials you want to delete and it returns true/false according to existance of the account.
 
-Exit Application
-Input: Enter 'ex'
-Output: The application exists                           
+* Exit Application
+Input: enter 'ex'
+Output: the application exists                           
 ## Technologies Used
 * python3.9
 ## Known Bugs
