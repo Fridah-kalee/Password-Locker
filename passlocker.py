@@ -1,3 +1,5 @@
+import random
+import string
 class User:
     '''
     Create User class that generates new instances of users
@@ -45,7 +47,19 @@ class Credentials():
     '''
     create credentials class that creates new objects of credentials
     '''
-    credentials_list = [] 
+    credentials_list = []
+
+# @classmethod
+# def verify_user(cls,username,password):
+#     '''
+#     a method to verify if the user is in our user_list or not
+#     '''
+#     user=''
+#     for user in User.user_list:
+#         if(user.username == username and user.password == password):
+#             user ==user.username
+#         return user
+
 
     def __init__(self,account,userName,password):
         self.account = account
@@ -88,4 +102,11 @@ class Credentials():
         '''
         method that returns a list of all credentials.
         '''
-        return cls.credentials_list                                              
+        return cls.credentials_list
+
+    def generatePassword(stringLength=7):
+        '''
+        Generate a random password string of letters,digits and special characters
+        '''
+        password = string.ascii_uppercase + string_lowercase + string.digits + "@^!&$*#"
+        return ''.join(random.choice(password)for i in range(stringLength))                                                  
